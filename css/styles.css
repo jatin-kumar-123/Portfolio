@@ -20,7 +20,7 @@ margin: auto;
 
 /* Similar code styling */
 
-.about, .education, .qualification, .skills, .projects, .contact, footer{
+.about, .education, .skills, .projects, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -229,8 +229,12 @@ section .title::after{
 }
 
 .about_blob {
-    width: 450px;
+    width: 440px;
     fill: crimson;
+    transition: all 0.3s ease;
+}
+.about_blob:hover{
+    width: 450px;
 }
 .about_blob_img {
     width: 360px;
@@ -265,18 +269,17 @@ section .title::after{
     color: crimson;
     background: none;
 }
-
-.fact-list {
+.fact-list{
     margin-left: 20px;
 }
- 
-
 
 /* education styling */
-#shorttext {
+#shorttext_college {
     display: none;
 }
-
+#shorttext_branch {
+    display: none;
+}
 .education .title::after{
     content: "my academics";
 }
@@ -488,6 +491,7 @@ section .title::after{
     width: 45%;
 }
 
+
 /* Alternate styling of right column in skills section */
 .right_two{
     display: flex;
@@ -527,6 +531,7 @@ section .title::after{
 .projects .title::after{
     content: 'what I have done';
     background: #111;
+    font-size: 15px;
 }
 
 .projects .card {
@@ -874,11 +879,17 @@ footer span a:hover{
         width: 400px;
         fill: crimson;
     }
+    .about_blob:hover{
+        width: 410px;
+    }
 } 
 @media (max-width: 1100px) {
     .about_blob {
         width: 370px;
         fill: crimson;
+    }
+    .about_blob:hover{
+        width: 378px;
     }
 }  
 
@@ -886,6 +897,9 @@ footer span a:hover{
     .about_blob {
         width: 340px;
         fill: crimson;
+    }
+    .about_blob:hover{
+        width: 352px;
     }
 }  
 
@@ -951,7 +965,10 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    
+    .education .edu-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
@@ -972,6 +989,7 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 32px;
     }
+    .education .edu-content .card,
     .skills .skills-content .column{
         width: 100%;
     }
@@ -1015,6 +1033,12 @@ footer span a:hover{
     .about .about-content .right .text{
         font-size: 18px;
     }
+    .skills .skills-content .left .text {
+        font-size: 18px;
+    }
+    .contact .contact-content .text {
+        font-size: 18px;
+    }
     
 }
 @media (max-width: 400px) {
@@ -1025,14 +1049,38 @@ footer span a:hover{
     .about .right p{
         font-size: 15px;
     }
+    .skills .skills-content .left .text {
+        font-size: 17px;
+    }
+    .skills .skills-content .left p {
+        font-size: 15px;
+    }
+    .contact .contact-content .text{
+        font-size: 17px;
+    }
+    .contact .contact-content .left p{
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 365px) {
     .about .about-content .right .text{
         font-size: 15px;
     }
-    
+    .skills .skills-content .left .text {
+        font-size: 15px;
+    }
     .about .right p{
+        font-size: 14px;
+    }
+    .skills .skills-content .left p {
+        font-size: 14px;
+    }
+    .contact .contact-content .text{
+        font-size: 15px;
+    }
+    .contact .contact-content .left p{
         font-size: 14px;
     }
 }
@@ -1040,21 +1088,107 @@ footer span a:hover{
     .about .about-content .right .text{
         font-size: 13px;
     }
+    .skills .skills-content .left .text {
+        font-size: 13px;
+    }
     
     .about .right p{
         font-size: 12px;
     }
+    .skills .skills-content .left p {
+        font-size: 12px;
+    }
+    .contact .contact-content .text{
+        font-size: 13px;
+    }
+    .contact .contact-content .left p{
+        font-size: 12px;
+    }
 }
 
-@media (min-width: 947px) and (max-width: 1280px) {
-    #longtext{
+@media (min-width: 948px) and (max-width: 1278px) {
+    #longtext_college{
         display: none;
     }
-    #shorttext{
-        display: inline-block;
+    #shorttext_college{
+        display: block;
     }
 }
 
+@media (max-width: 818px) {
+    #longtext_college{
+        display: none;
+    }
+    #shorttext_college{
+        display: block;
+    }
+}
+/* @media (max-width: 500px) {
+    #longtext_college{
+        display: none;
+    }
+    #shorttext_college{
+        display: block;
+    }
+} */
+/* 947 1018 */
+@media (min-width: 947px) and (max-width: 1018px){
+    #longtext_branch {
+        display: none;
+    }
+    #shorttext_branch {
+        display: block;
+    }
+}
+@media (max-width: 379px) {
+    section .title::after{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 410px) {
+    .contact-content .row .divs .rightdiv .menu li a i { /* Decorating the list items */
+        font-size: 27px;
+        padding: 0px 11px;
+    }
+    .contact .contact-content .row .info {
+        margin-left: 22px;
+    }
+    .contact .contact-content .row .divs .leftdiv .info {
+        margin-left: 22px;
+    }
+    .contact .contact-content .row i{
+        font-size: 23px;
+    }
+    .contact .contact-content .info .head {
+        font-size: 15px;
+    }
+    .contact .contact-content .info .sub-title{
+        font-size: 15px;
+    }
+}
+@media (max-width: 385px) {
+    .contact-content .row .divs .rightdiv .menu li a i { /* Decorating the list items */
+        font-size: 24px;
+        padding: 0px 10px;
+    }
+    .contact .contact-content .row .info {
+        margin-left: 19px;
+    }
+    .contact .contact-content .row .divs .leftdiv .info {
+        margin-left: 19px;
+    }
+    .contact .contact-content .row i{
+        font-size: 21px;
+    }
+    .contact .contact-content .info .head {
+        font-size: 13px;
+    }
+    .contact .contact-content .info .sub-title{
+        font-size: 13px;
+    }
+}
+/*till here*/
 @media(max-width: 772px){
     .edu-content .center-line{
         left: 40px;
@@ -1079,6 +1213,20 @@ footer span a:hover{
     }
 }
 @media(max-width: 440px){
+    #longtext_college{
+        display: none;
+    }
+    #shorttext_college{
+        display: block;
+    }
+    #longtext_branch{
+        display: none;
+    }
+    #shorttext_branch{
+        display: block;
+    }
+}
+@media(max-width: 350px){
     .edu-content .center-line,
     .card section::before,
     .card section .icon{
