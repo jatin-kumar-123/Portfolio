@@ -24,7 +24,22 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass('active');
     });
 
-    // owl carousel script
+    //About owl carousel script
+    $('.Aboutcarousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            }
+        }
+
+    });
+
+    // projects owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
