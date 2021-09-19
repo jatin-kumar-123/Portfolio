@@ -965,10 +965,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .education .edu-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
+    
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
