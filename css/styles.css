@@ -1007,8 +1007,8 @@ footer span a:hover{
 
 @media (max-width: 550px) {
     .scroll-up-btn {
-        /* top: 530px; */
-        bottom: 300px;
+        top: 400px;
+        /* bottom: 300px; */
     }
 
 }
