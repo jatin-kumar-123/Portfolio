@@ -184,16 +184,25 @@ section .title::after{
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
 
-    background-color: #111;
+    background-color: #000100;
     
 }
 .home .max-width {
     /* margin: auto 0 auto 40px ; */
     /* background-color: aqua;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding: 0 80px;
-    margin: auto auto auto 0px;
+    /* margin: auto auto auto 0px; */
+    margin: auto;
     /* background-color: aqua; */
 } 
+.toStabilizehome-content{
+    opacity: 0;
+}
+
 .home .home-content .text-1 {
     font-size: 27px;
 }
