@@ -221,10 +221,10 @@ section .title::after{
     color: crimson;
     font-weight: 500;
 }
-.home .home-content .text-4 {
+/* .home .home-content .text-4 {
     font-size: 25px;
     margin: 5px 0;
-}
+} */
 
 
 /* About Section styling */
@@ -258,14 +258,18 @@ section .title::after{
 }
 
 
-.about .about-content .right .text{
+.about .about-content .right .text {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.about .about-content .right .text span{
+/* .about .about-content .right .text span{
     color: crimson;
+} */
+.about .about-content .right p span{
+    color: crimson;
+    font-weight: 1000;
 }
 
 .about .about-content .right p {
@@ -973,9 +977,9 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 35px;
     }
-    .home .home-content .text-4{
+    /* .home .home-content .text-4{
         font-size: 22px;
-    }
+    } */
     .about .about-content .column {
         width: 100%;
     }
@@ -1007,9 +1011,9 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 32px;
     }
-    .home .home-content .text-4{
+    /* .home .home-content .text-4{
         font-size: 21px;
-    }
+    } */
     
     .skills .skills-content .column{
         width: 100%;
@@ -1048,9 +1052,9 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .home .home-content .text-4{
+    /* .home .home-content .text-4{
         font-size: 20px;
-    }
+    } */
 
 
 }
@@ -1058,9 +1062,9 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 22px;
     }
-    .home .home-content .text-4{
+    /* .home .home-content .text-4{
         font-size: 17px;
-    }
+    } */
 }
 @media (max-width: 420px) {
     .about .about-content .right .text{
