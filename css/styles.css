@@ -264,13 +264,14 @@ section .title::after{
     margin-bottom: 10px;
 }
 
-/* .about .about-content .right .text span{
-    color: crimson;
-} */
+
 .about .about-content .right p span{
     color: crimson;
     font-weight: 1000;
 }
+.about .about-content .right .card .funfacts .text span{
+    color: crimson;
+} 
 
 .about .about-content .right p {
     text-align: justify;
