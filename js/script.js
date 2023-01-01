@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 });
 
-function sendMail(params) {
+function SsendMail(params) {
     var tempParams = {
         sender_name:document.getElementById("sender_name").value,
         sender_mail:document.getElementById("sender_mail").value,
@@ -92,4 +92,41 @@ function sendMail(params) {
             document.getElementById("form").reset();
         }
     })
+}
+
+// var send = document.getElementById("sendButton");
+// send.addEventListener('click', function(e){
+//     e.preventDefault()
+//     var name = ;
+//     var email = ;
+//     var subject = ;
+//     var message = ;
+
+// })
+
+function sendMail(){
+    var name = document.getElementById('sender_name').value;
+    var senderEmail = document.getElementById('sender_mail').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+    var body = 'Name: '+name + '<br/>Email: ' + senderEmail + '<br/>Subject: '+ subject + '<br/>Message: '+ message;
+
+    Email.send({
+        SecureToken : "bdcab06b-e4b8-45bd-8ab4-b8b947949aff",
+        To : "jatink9562@gmail.com",
+        From : senderEmail,
+        Subject : subject,
+        Body : body
+    }).then((value) => {
+        console.log("value is: ",value);
+        if(value == 'OK'){
+            var thankuDiv = document.getElementById('Thankudiv');
+            thankuDiv.style.display = "block";
+            setTimeout(() => { 
+                thankuDiv.style.display = "none";
+            } , 2500);
+
+            document.getElementById("form").reset();
+        }
+    });
 }

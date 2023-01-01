@@ -834,18 +834,20 @@ background: crimson;
 
 }
 
+.Thanku {
+    display: none;
+}
 .ThankuMessage {
     color: crimson;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    opacity: 0;
     transition: all 0.3s ease;
     z-index: 9999;
 }
 
-.ThankuMessage.appear {
+/*.ThankuMessage.appear {
     opacity: 1;
-}
+}*/
 
 
 

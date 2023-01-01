@@ -13,10 +13,12 @@
         <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script type="text/javascript">
+        <!--script type="text/javascript">
             (function() {
             emailjs.init("user_PXmvnsT0bHmQJ4xA3hz01");
             })();
+        </script-->
+        <script src="https://smtpjs.com/v3/smtp.js">
         </script>
     </Head>
     <body>
@@ -382,9 +384,9 @@
                             </div>
                             <div class="button_thanks">
                                 <div class="button">
-                                    <button type='submit' class = "sendMessage" onclick= 'sendMail()'>Send Message</button>
+                                    <button type='submit' class = "sendMessage" id="sendButton" onclick= 'sendMail()'>Send Message</button>
                                 </div>
-                                <div class="Thanku">
+                                <div class="Thanku" id="Thankudiv">
                                     <p class="ThankuMessage">Thanks! I will reply ASAP.</p>
                                 </div>
                             </div>
@@ -403,6 +405,7 @@
         
 
         <script src="js/script.js"></script>
+        
         
     </body>
 </html>
